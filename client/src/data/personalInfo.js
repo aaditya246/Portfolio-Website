@@ -1,7 +1,7 @@
 export const personalInfo = {
   name: 'Aaditya',
   fullTitle: 'Full-Stack Developer',
-  tagline: 'Building scalable web apps with the MERN stack & solving 600+ DSA problems along the way.',
+  tagline: 'Building scalable web applications with the MERN stack and sharpening problem-solving skills through competitive programming.',
 
   summary:
     'Full-Stack Developer skilled in the MERN Stack with experience building scalable web applications. Strong foundation in Data Structures & Algorithms with 600+ LeetCode problems solved. Currently pursuing B.Tech in Electronics and Communication Engineering at MNNIT Allahabad.',
@@ -11,7 +11,6 @@ export const personalInfo = {
     'Full-Stack Developer',
     'MERN Stack Engineer',
     'Competitive Programmer',
-    '600+ LeetCode Problems Solved',
   ],
 
   contact: {
@@ -26,7 +25,7 @@ export const personalInfo = {
     codeforces: 'https://codeforces.com/profile/aaditya88',
   },
 
-  resumeFile: '/resume.pdf',
+  resumeFile: 'https://drive.google.com/file/d/1q8z1SvYykUjLZA0pcP4oX6aVyqBUCgYH/view?usp=drive_link',
 
   location: 'Allahabad, Uttar Pradesh, India',
 }

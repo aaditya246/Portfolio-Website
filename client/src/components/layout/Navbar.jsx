@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiMenu, HiX } from "react-icons/hi";
 import { personalInfo } from "../../data/personalInfo";
+import ThemeToggle from "../ui/ThemeToggle";
 
 const navLinks = [
     { label: "Home", href: "#hero" },
@@ -63,7 +64,7 @@ const Navbar = () => {
                     }}
                     className="font-display text-xl font-bold text-ink tracking-tight"
                 >
-                    {personalInfo.name} <span className="text-accent">.</span> </a>
+                    {personalInfo.name} <span className="text-accent"></span> </a>
 
                 {/* Desktop Navigation */}
                 <ul className="hidden md:flex items-center gap-8">
@@ -148,6 +149,16 @@ const Navbar = () => {
                         </ul>
                     </motion.div>
                 )}
+                <div className="flex items-center gap-4">
+                    <ThemeToggle />
+
+                    <a
+                        href="#contact"
+                        className="hidden md:inline-flex btn-secondary"
+                    >
+                        Let's Talk
+                    </a>
+                </div>
             </AnimatePresence>
         </motion.header>
 

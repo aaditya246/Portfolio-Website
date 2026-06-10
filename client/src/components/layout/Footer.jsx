@@ -40,7 +40,7 @@ const Footer = () => {
                 className="font-display text-xl font-bold text-ink tracking-tight"
             >
                 {personalInfo.name}
-                <span className="text-accent">.</span>
+                <span className="text-accent"></span>
             </a>
 
             <p className="text-ink-muted text-sm leading-relaxed">
@@ -98,13 +98,13 @@ const Footer = () => {
     </div>
 
         {/* Bottom Bar */}
-        <div className="pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="pt-2 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="font-mono text-xs text-ink-faint text-center sm:text-left">
                 © {currentYear} {personalInfo.name}. All rights reserved.
             </p>
 
             <p className="font-mono text-xs text-ink-faint">
-                Built with React, Tailwind CSS & Framer Motion
+                {/* Built with React, Tailwind CSS & Framer Motion */}
             </p>
         </div>
     </div>

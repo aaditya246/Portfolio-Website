@@ -28,9 +28,7 @@ const EducationCard = ({ item }) => {
           <span className="font-mono text-xs px-3 py-1 rounded-full border border-border bg-panel-light/60 text-ink-faint">
             {item.duration}
           </span>
-          <span className="font-mono text-xs px-3 py-1 rounded-full border border-border-hover bg-accent/10 text-accent-glow">
-            {item.score}
-          </span>
+
         </div>
       </div>
     </GlassCard>

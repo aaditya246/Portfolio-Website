@@ -36,7 +36,7 @@ const ProjectCard = ({ project }) => {
 
                 {/* Highlights */}
                 <ul className="flex flex-col gap-2">
-                    {project.highlights.slice(0, 3).map((point, idx) => (
+                    {project.highlights.slice(0,5).map((point, idx) => (
                         <li key={idx} className="flex gap-2 text-sm text-ink-faint leading-relaxed">
                             <span className="text-accent mt-1.5 shrink-0">▹</span>
                             <span>{point}</span>
