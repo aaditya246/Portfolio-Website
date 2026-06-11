@@ -1,25 +1,8 @@
-import dotenv from "dotenv";
-dotenv.config();
-
-
-import nodemailer from 'nodemailer'
+import { Resend } from 'resend'
 
 /**
- * Nodemailer transporter configured from environment variables.
- */
-
-const transporter = nodemailer.createTransport({
-  host: process.env.EMAIL_HOST,
-  port: Number(process.env.EMAIL_PORT),
-  secure: Number(process.env.EMAIL_PORT) === 465, // true for port 465, false for 587
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
-  },
-})
-
-/**
- * Sends a notification email to the site owner and an auto-reply to the sender.
+ * Sends a notification email to the site owner using Resend.
+ * Auto-reply to the sender is skipped unless a verified domain is configured.
  *
  * @param {object} data
  * @param {string} data.name
@@ -28,13 +11,14 @@ const transporter = nodemailer.createTransport({
  * @param {string} data.message
  */
 export const sendContactEmails = async ({ name, email, subject, message }) => {
+  const resend = new Resend(process.env.RESEND_API_KEY)
+
   const ownerSubject = subject
     ? `Portfolio Contact: ${subject}`
     : `New Portfolio Contact from ${name}`
 
-  // Email to site owner
-  const ownerMailOptions = {
-    from: `"Portfolio Contact Form" <${process.env.EMAIL_USER}>`,
+  const result = await resend.emails.send({
+    from: 'Portfolio Contact <onboarding@resend.dev>',
     to: process.env.EMAIL_TO,
     replyTo: email,
     subject: ownerSubject,
@@ -64,30 +48,11 @@ export const sendContactEmails = async ({ name, email, subject, message }) => {
         </div>
       </div>
     `,
+  })
+
+  if (result.error) {
+    throw new Error(result.error.message || 'Failed to send email via Resend')
   }
 
-  // Auto-reply to sender
-  const autoReplyMailOptions = {
-    from: `"Aaditya" <${process.env.EMAIL_USER}>`,
-    to: email,
-    subject: 'Thanks for reaching out!',
-    html: `
-      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-        <h2 style="color: #3B82F6;">Hi ${name},</h2>
-        <p>Thanks for getting in touch through my portfolio. I've received your message and will get back to you as soon as possible.</p>
-        <div style="margin-top: 16px; padding: 16px; background: #f4f4f5; border-radius: 8px;">
-          <p style="margin: 0; font-weight: bold;">Your message:</p>
-          <p style="margin: 8px 0 0; white-space: pre-wrap;">${message}</p>
-        </div>
-        <p style="margin-top: 24px;">Best regards,<br/>Aaditya</p>
-      </div>
-    `,
-  }
-
-  await Promise.all([
-    transporter.sendMail(ownerMailOptions),
-    transporter.sendMail(autoReplyMailOptions),
-  ])
+  return result
 }
-
-export default transporter
