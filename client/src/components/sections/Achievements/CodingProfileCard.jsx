@@ -34,23 +34,23 @@ const CodingProfileCard = ({ profile }) => {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={`Visit ${profile.platform} profile`}
-                        className="text-black dark:text-white-muted hover:text-accent transition-colors duration-300 text-lg"
+                        className="text-slate-900 dark:text-ink-muted hover:text-accent transition-colors duration-300 text-lg"
                     >
                         <FiExternalLink />
                     </a>
                 </div>
                 <div>
-                    <h3 className="font-display text-lg sm:text-xl font-semibold text-black dark:text-white">
+                    <h3 className="font-display text-lg sm:text-xl font-semibold text-slate-900 dark:text-ink">
                         {profile.platform}
                     </h3>
-                    <p className="font-mono text-sm text-black dark:text-white-muted mt-1">@{profile.username}</p>
+                    <p className="font-mono text-sm text-slate-900 dark:text-ink-muted mt-1">@{profile.username}</p>
                 </div>
 
                 <span className="font-mono text-sm px-3 py-1.5 rounded-lg border border-border-hover bg-accent/10 text-accent-glow w-fit">
                     {profile.stat}
                 </span>
 
-                <p className="text-black dark:text-white-muted text-sm leading-relaxed">{profile.description}</p>
+                <p className="text-slate-900 dark:text-ink-muted text-sm leading-relaxed">{profile.description}</p>
             </GlassCard>
         </motion.div>
     )

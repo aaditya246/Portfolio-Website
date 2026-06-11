@@ -66,7 +66,7 @@ const ContactForm = () => {
   }
 
   const fieldClass = (hasError) =>
-    `w-full bg-panel/60 backdrop-blur-sm border rounded-xl px-4 py-3 text-black dark:text-white placeholder:text-black dark:text-white-muted/60 font-body text-sm sm:text-base transition-colors duration-300 focus:outline-none ${
+    `w-full bg-panel/60 backdrop-blur-sm border rounded-xl px-4 py-3 text-slate-900 dark:text-ink placeholder:text-slate-900 dark:text-ink-muted/60 font-body text-sm sm:text-base transition-colors duration-300 focus:outline-none ${
       hasError
         ? 'border-red-400/60 focus:border-red-400'
         : 'border-border focus:border-border-hover'
@@ -76,7 +76,7 @@ const ContactForm = () => {
     <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-5">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div className="flex flex-col gap-2">
-          <label htmlFor="name" className="font-mono text-xs text-black dark:text-white-muted uppercase tracking-wider">
+          <label htmlFor="name" className="font-mono text-xs text-slate-900 dark:text-ink-muted uppercase tracking-wider">
             Name
           </label>
           <input
@@ -92,7 +92,7 @@ const ContactForm = () => {
         </div>
 
         <div className="flex flex-col gap-2">
-          <label htmlFor="email" className="font-mono text-xs text-black dark:text-white-muted uppercase tracking-wider">
+          <label htmlFor="email" className="font-mono text-xs text-slate-900 dark:text-ink-muted uppercase tracking-wider">
             Email
           </label>
           <input
@@ -109,8 +109,8 @@ const ContactForm = () => {
       </div>
 
       <div className="flex flex-col gap-2">
-        <label htmlFor="subject" className="font-mono text-xs text-black dark:text-white-muted uppercase tracking-wider">
-          Subject <span className="text-black dark:text-white-faint normal-case">(optional)</span>
+        <label htmlFor="subject" className="font-mono text-xs text-slate-900 dark:text-ink-muted uppercase tracking-wider">
+          Subject <span className="text-slate-900 dark:text-ink-faint normal-case">(optional)</span>
         </label>
         <input
           id="subject"
@@ -124,7 +124,7 @@ const ContactForm = () => {
       </div>
 
       <div className="flex flex-col gap-2">
-        <label htmlFor="message" className="font-mono text-xs text-black dark:text-white-muted uppercase tracking-wider">
+        <label htmlFor="message" className="font-mono text-xs text-slate-900 dark:text-ink-muted uppercase tracking-wider">
           Message
         </label>
         <textarea

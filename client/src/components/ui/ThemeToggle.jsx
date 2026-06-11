@@ -9,7 +9,7 @@ const ThemeToggle = () => {
       onClick={() => setDarkMode(!darkMode)}
       className="w-10 h-10 rounded-full border flex items-center justify-center transition"
     >
-      {darkMode ? <FiSun size={18} /> : <FiMoon size={18} />}
+      {darkMode ? <FiSun className="text-emerald-500" size={18} /> : <FiMoon  className="text-emerald-500" size={18} />}
     </button>
   );
 };

@@ -21,23 +21,23 @@ const ProjectCard = ({ project }) => {
                 )}
 
                 <div className="flex flex-col gap-1 pr-24">
-                    <h3 className="font-display text-xl sm:text-2xl font-bold text-black dark:text-white">
+                    <h3 className="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-ink">
                         {project.title}
                     </h3>
-                    <p className="text-black dark:text-white-muted text-sm sm:text-base">{project.subtitle}</p>
+                    <p className="text-slate-900 dark:text-ink-muted text-sm sm:text-base">{project.subtitle}</p>
                     {project.event && (
                         <span className="font-mono text-xs text-accent-glow mt-1">{project.event}</span>
                     )}
                 </div>
 
-                <p className="text-black dark:text-white-muted text-sm sm:text-base leading-relaxed">
+                <p className="text-slate-900 dark:text-ink-muted text-sm sm:text-base leading-relaxed">
                     {project.description}
                 </p>
 
                 {/* Highlights */}
                 <ul className="flex flex-col gap-2">
                     {project.highlights.slice(0,5).map((point, idx) => (
-                        <li key={idx} className="flex gap-2 text-sm text-black dark:text-white-faint leading-relaxed">
+                        <li key={idx} className="flex gap-2 text-sm text-slate-900 dark:text-ink-faint leading-relaxed">
                             <span className="text-accent mt-1.5 shrink-0">▹</span>
                             <span>{point}</span>
                         </li>
@@ -49,7 +49,7 @@ const ProjectCard = ({ project }) => {
                     {project.techStack.map((tech) => (
                         <span
                             key={tech}
-                            className="font-mono text-xs px-3 py-1.5 rounded-lg border border-border bg-panel-light/50 text-black dark:text-white-faint"
+                            className="font-mono text-xs px-3 py-1.5 rounded-lg border border-border bg-panel-light/50 text-slate-900 dark:text-ink-faint"
                         >
                             {tech}
                         </span>

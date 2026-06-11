@@ -8,7 +8,18 @@ import Contact from '../components/sections/Contact/Contact'
 
 const Home = () => {
   return (
-    <main>
+    <main
+      className="
+        min-h-screen
+        bg-gradient-to-br
+        from-emerald-50
+        via-teal-50
+        to-cyan-50
+
+        dark:bg-none
+        dark:bg-void
+      "
+    >
       <Hero />
       <About />
       <Skills />

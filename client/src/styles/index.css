@@ -3,100 +3,108 @@
 @tailwind utilities;
 
 @layer base {
-  * {
-    @apply border-border;
-    box-sizing: border-box;
-  }
+    * {
+        @apply border-border;
+        box-sizing: border-box;
+    }
 
-  html {
-    scroll-behavior: smooth;
-  }
+    html {
+        scroll-behavior: smooth;
+    }
 
-  body {
-    @apply bg-void text-ink font-body antialiased;
-    overflow-x: hidden;
-  }
+    body {
+        @apply bg-void text-ink font-body antialiased;
+        overflow-x: hidden;
+    }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-display;
-  }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-display;
+    }
 
-  /* Scrollbar */
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
 
-  ::-webkit-scrollbar-track {
-    background: #05060A;
-  }
+    ::-webkit-scrollbar-track {
+        background: #05060A;
+    }
 
-  ::-webkit-scrollbar-thumb {
-    background: #1D4ED8;
-    border-radius: 999px;
-  }
+    ::-webkit-scrollbar-thumb {
+        background: #10B981;
+    }
 
-  ::-webkit-scrollbar-thumb:hover {
-    background: #3B82F6;
-  }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #34D399;
+    }
 
-  /* Focus visibility */
-  :focus-visible {
-    outline: 2px solid #3B82F6;
-    outline-offset: 2px;
-    border-radius: 4px;
-  }
+    /* Focus visibility */
+    :focus-visible {
+        outline: 2px solid #3B82F6;
+        outline-offset: 2px;
+        border-radius: 4px;
+    }
 
-  /* Selection */
-  ::selection {
-    background: rgba(59, 130, 246, 0.3);
-    color: #ffffff;
-  }
+    /* Selection */
+    ::selection {
+        background: rgba(16, 185, 129, 0.3);
+        color: white;
+    }
 }
 
 @layer components {
-  .glass-card {
-    @apply bg-panel/60 backdrop-blur-xl border border-border rounded-2xl;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-  }
+    .glass-card {
+        @apply bg-panel/60 backdrop-blur-xl border border-border rounded-2xl;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    }
 
-  .glass-card:hover {
-    @apply border-border-hover shadow-glow-sm;
-  }
+    .glass-card:hover {
+        @apply border-border-hover shadow-glow-sm;
+    }
 
-  .section-padding {
-    @apply px-6 sm:px-10 lg:px-20 py-24 md:py-32;
-  }
+    .section-padding {
+        @apply px-6 sm:px-10 lg:px-20 py-24 md:py-32;
+    }
 
-  .container-content {
-    @apply max-w-content mx-auto w-full;
-  }
+    .container-content {
+        @apply max-w-content mx-auto w-full;
+    }
 
-  .gradient-text {
-    @apply bg-gradient-to-r from-accent-glow via-accent to-accent-dark bg-clip-text text-transparent;
-  }
+    .gradient-text {
+        @apply bg-gradient-to-r from-accent-glow via-accent to-accent-dark bg-clip-text text-transparent;
+    }
 
-  .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-accent text-white font-medium font-body transition-all duration-300 hover:bg-accent-dark hover:shadow-glow;
-  }
+    .btn-primary {
+        @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-accent text-white font-medium font-body transition-all duration-300 hover:bg-accent-dark hover:shadow-glow;
+    }
 
-  .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-border text-ink font-medium font-body transition-all duration-300 hover:border-border-hover hover:bg-panel-light;
-  }
+    .btn-secondary {
+        @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-border text-ink font-medium font-body transition-all duration-300 hover:border-border-hover hover:bg-panel-light;
+    }
 }
 
 @layer utilities {
-  @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-      scroll-behavior: auto !important;
+    @media (prefers-reduced-motion: reduce) {
+
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+            scroll-behavior: auto !important;
+        }
     }
-  }
 }
+
 * {
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease,
-    border-color 0.3s ease;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
 }
