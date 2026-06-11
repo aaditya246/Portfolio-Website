@@ -11,11 +11,14 @@ app.use(helmet())
 // CORS — restrict to frontend origin
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || 'http://localhost:5173',
-    methods: ['GET', 'POST'],
-    credentials: true,
+    origin: [
+      "http://localhost:5173",
+      "https://portfolio-website-pink-five-14.vercel.app"
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
   })
-)
+);
 
 // Trust proxy (needed for correct req.ip behind reverse proxies/hosting platforms)
 app.set('trust proxy', 1)
