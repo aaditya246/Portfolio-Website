@@ -19,13 +19,13 @@ const EducationCard = ({ item }) => {
       </div>
 
       <div className="flex flex-col gap-2">
-        <h3 className="font-display text-lg sm:text-xl font-semibold text-ink leading-snug">
+        <h3 className="font-display text-lg sm:text-xl font-semibold text-black dark:text-white leading-snug">
           {item.institution}
         </h3>
-        <p className="text-ink-muted text-sm sm:text-base">{item.degree}</p>
+        <p className="text-black dark:text-white-muted text-sm sm:text-base">{item.degree}</p>
 
         <div className="flex flex-wrap items-center gap-3 mt-1">
-          <span className="font-mono text-xs px-3 py-1 rounded-full border border-border bg-panel-light/60 text-ink-faint">
+          <span className="font-mono text-xs px-3 py-1 rounded-full border border-border bg-panel-light/60 text-black dark:text-white-faint">
             {item.duration}
           </span>
 

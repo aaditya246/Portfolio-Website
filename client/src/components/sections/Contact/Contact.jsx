@@ -53,10 +53,10 @@ const Contact = () => {
                     <Icon />
                   </div>
                   <div className="flex flex-col">
-                    <span className="font-mono text-xs text-ink-muted uppercase tracking-wider">
+                    <span className="font-mono text-xs text-black dark:text-white-muted uppercase tracking-wider">
                       {label}
                     </span>
-                    <span className="text-ink text-sm sm:text-base font-medium break-all">
+                    <span className="text-black dark:text-white text-sm sm:text-base font-medium break-all">
                       {value}
                     </span>
                   </div>

@@ -37,20 +37,20 @@ const Footer = () => {
             <a
                 href="#hero"
                 onClick={(e) => handleNavClick(e, "#hero")}
-                className="font-display text-xl font-bold text-ink tracking-tight"
+                className="font-display text-xl font-bold text-black dark:text-white tracking-tight"
             >
                 {personalInfo.name}
                 <span className="text-accent"></span>
             </a>
 
-            <p className="text-ink-muted text-sm leading-relaxed">
+            <p className="text-black dark:text-white-muted text-sm leading-relaxed">
                 {personalInfo.tagline}
             </p>
         </div>
 
         {/* Quick Links */}
         <div className="flex flex-col gap-3">
-            <span className="font-mono text-xs text-ink-muted uppercase tracking-wider">
+            <span className="font-mono text-xs text-black dark:text-white-muted uppercase tracking-wider">
                 Quick Links
             </span>
 
@@ -60,7 +60,8 @@ const Footer = () => {
                         <a
                             href={link.href}
                             onClick={(e) => handleNavClick(e, link.href)}
-                            className="text-ink-faint hover:text-accent text-sm transition-colors duration-200"
+                            className="text-black dark:text-white-faint hover:text-accent text-sm transition-colors duration-200"
+                            
                         >
                             {link.label}
                         </a>
@@ -71,7 +72,7 @@ const Footer = () => {
 
         {/* Social Links */}
         <div className="flex flex-col gap-3">
-            <span className="font-mono text-xs text-ink-muted uppercase tracking-wider">
+            <span className="font-mono text-xs text-black dark:text-white-muted uppercase tracking-wider">
                 Connect
             </span>
 
@@ -87,7 +88,7 @@ const Footer = () => {
                                 : undefined
                         }
                         aria-label={label}
-                        className="w-10 h-10 flex items-center justify-center rounded-lg border border-border bg-panel/60 text-ink-muted hover:text-accent hover:border-border-hover transition-all duration-300"
+                        className="w-10 h-10 flex items-center justify-center rounded-lg border border-border bg-white dark:bg-black/60 text-black dark:text-white-muted hover:text-accent hover:border-border-hover transition-all duration-300"
                     >
                         <Icon />
                     </a>
@@ -99,11 +100,11 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="pt-2 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="font-mono text-xs text-ink-faint text-center sm:text-left">
+            <p className="font-mono text-xs text-black dark:text-white-faint text-center sm:text-left">
                 © {currentYear} {personalInfo.name}. All rights reserved.
             </p>
 
-            <p className="font-mono text-xs text-ink-faint">
+            <p className="font-mono text-xs text-black dark:text-white-faint">
                 {/* Built with React, Tailwind CSS & Framer Motion */}
             </p>
         </div>

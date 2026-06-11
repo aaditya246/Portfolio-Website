@@ -36,10 +36,10 @@ const TimelineItem = ({ item, isLast = false }) => {
           <span className="font-mono text-xs text-accent tracking-wider uppercase">
             {item.type}
           </span>
-          <h3 className="font-display text-lg sm:text-xl font-semibold text-ink mt-2">
+          <h3 className="font-display text-lg sm:text-xl font-semibold text-black dark:text-white mt-2">
             {item.role}
           </h3>
-          <p className="text-ink-muted text-sm sm:text-base mt-1">{item.organization}</p>
+          <p className="text-black dark:text-white-muted text-sm sm:text-base mt-1">{item.organization}</p>
         </GlassCard>
       </div>
     </motion.div>

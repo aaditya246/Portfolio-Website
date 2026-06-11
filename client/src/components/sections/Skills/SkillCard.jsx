@@ -39,7 +39,7 @@ const SkillCard = ({ category }) => {
           <Icon />
         </div>
 
-        <h3 className="font-display text-lg sm:text-xl font-semibold text-ink">
+        <h3 className="font-display text-lg sm:text-xl font-semibold text-black dark:text-white">
           {category.title}
         </h3>
 
@@ -47,7 +47,7 @@ const SkillCard = ({ category }) => {
           {category.skills.map((skill) => (
             <span
               key={skill}
-              className="font-mono text-xs px-3 py-1.5 rounded-lg border border-border bg-panel-light/50 text-ink-faint transition-all duration-300 hover:border-border-hover hover:text-accent-glow hover:bg-accent/5"
+              className="font-mono text-xs px-3 py-1.5 rounded-lg border border-border bg-panel-light/50 text-black dark:text-white-faint transition-all duration-300 hover:border-border-hover hover:text-accent-glow hover:bg-accent/5"
             >
               {skill}
             </span>

@@ -45,7 +45,7 @@ const Loader = ({ onComplete }) => {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
-            className="font-display text-4xl sm:text-5xl font-bold text-ink tracking-tight mb-8"
+            className="font-display text-4xl sm:text-5xl font-bold text-black dark:text-white tracking-tight mb-8"
           >
             Aaditya<span className="text-accent">.</span>
           </motion.div>
@@ -63,7 +63,7 @@ const Loader = ({ onComplete }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
-            className="font-mono text-xs text-ink-muted mt-4 tracking-widest"
+            className="font-mono text-xs text-black dark:text-white-muted mt-4 tracking-widest"
           >
             {progress}%
           </motion.span>

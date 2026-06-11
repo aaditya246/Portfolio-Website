@@ -51,7 +51,7 @@ const Navbar = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-                ? "bg-void/70 backdrop-blur-xl border-b border-border"
+                ? "bg-white dark:bg-black/70 backdrop-blur-xl border-b border-border"
                 : "bg-transparent border-b border-transparent"
                 }`}
         > <nav className="container-content flex items-center justify-between px-6 sm:px-10 lg:px-20 py-4">
@@ -62,7 +62,7 @@ const Navbar = () => {
                         e.preventDefault();
                         handleNavClick("#hero");
                     }}
-                    className="font-display text-xl font-bold text-ink tracking-tight"
+                    className="font-display text-xl font-bold text-black dark:text-white tracking-tight"
                 >
                     {personalInfo.name} <span className="text-accent"></span> </a>
 
@@ -76,7 +76,7 @@ const Navbar = () => {
                                     e.preventDefault();
                                     handleNavClick(link.href);
                                 }}
-                                className="font-body text-sm text-ink-muted hover:text-ink transition-colors duration-200 relative group"
+                                className="font-body text-sm text-black dark:text-white-muted hover:text-black dark:text-white transition-colors duration-200 relative group"
                             >
                                 {link.label}
                                 <span className="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-accent transition-all duration-300 group-hover:w-full" />
@@ -100,7 +100,7 @@ const Navbar = () => {
                 {/* Mobile Menu Button */}
                 <button
                     onClick={() => setIsMobileOpen((prev) => !prev)}
-                    className="md:hidden text-ink text-2xl p-2"
+                    className="md:hidden text-black dark:text-white text-2xl p-2"
                     aria-label={isMobileOpen ? "Close menu" : "Open menu"}
                     aria-expanded={isMobileOpen}
                 >
@@ -116,7 +116,7 @@ const Navbar = () => {
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.3 }}
-                        className="md:hidden overflow-hidden bg-void/95 backdrop-blur-xl border-b border-border"
+                        className="md:hidden overflow-hidden bg-white dark:bg-black/95 backdrop-blur-xl border-b border-border"
                     >
                         <ul className="flex flex-col px-6 py-4 gap-1">
                             {navLinks.map((link) => (
@@ -127,7 +127,7 @@ const Navbar = () => {
                                             e.preventDefault();
                                             handleNavClick(link.href);
                                         }}
-                                        className="block py-3 font-body text-base text-ink-muted hover:text-ink transition-colors duration-200"
+                                        className="block py-3 font-body text-base text-black dark:text-white-muted hover:text-black dark:text-white transition-colors duration-200"
                                     >
                                         {link.label}
                                     </a>
@@ -143,22 +143,22 @@ const Navbar = () => {
                                     }}
                                     className="btn-primary w-full text-center block"
                                 >
-                                    Let's Talk
+                                    <ThemeToggle />
                                 </a>
                             </li>
                         </ul>
                     </motion.div>
                 )}
                 <div className="flex items-center gap-4">
-                    <ThemeToggle />
+  <ThemeToggle />
 
-                    <a
-                        href="#contact"
-                        className="hidden md:inline-flex btn-secondary"
-                    >
-                        Let's Talk
-                    </a>
-                </div>
+  <a
+    href="#contact"
+    className="hidden md:inline-flex btn-secondary"
+  >
+    Let's Talk
+  </a>
+</div>
             </AnimatePresence>
         </motion.header>
 

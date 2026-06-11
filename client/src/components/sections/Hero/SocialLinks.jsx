@@ -63,7 +63,7 @@ const SocialLinks = ({ className = '' }) => {
           whileTap={{ scale: 0.95 }}
           className="w-11 h-11 flex items-center justify-center rounded-xl
                      border border-border bg-panel/60 backdrop-blur-sm
-                     text-ink-muted text-lg
+                     text-black dark:text-white-muted text-lg
                      transition-colors duration-300
                      hover:border-border-hover hover:text-accent hover:shadow-glow-sm"
         >

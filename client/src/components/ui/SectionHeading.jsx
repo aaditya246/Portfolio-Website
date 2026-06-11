@@ -27,11 +27,11 @@ const SectionHeading = ({ eyebrow, title, description, align = 'left', className
           {eyebrow}
         </span>
       )}
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-ink tracking-tight">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black dark:text-white tracking-tight">
         {title}
       </h2>
       {description && (
-        <p className="text-ink-muted text-base sm:text-lg leading-relaxed">
+        <p className="text-black dark:text-white-muted text-base sm:text-lg leading-relaxed">
           {description}
         </p>
       )}

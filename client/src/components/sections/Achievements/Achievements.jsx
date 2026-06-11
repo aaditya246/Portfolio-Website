@@ -43,12 +43,12 @@ const Achievements = () => {
                 <div className="w-10 h-10 rounded-lg bg-accent/10 border border-border-hover flex items-center justify-center text-accent text-base">
                   <FiAward />
                 </div>
-                <h3 className="font-display text-base sm:text-lg font-semibold text-ink">
+                <h3 className="font-display text-base sm:text-lg font-semibold text-black dark:text-white">
                   {item.title}
                 </h3>
-                <p className="text-ink-muted text-sm leading-relaxed">{item.description}</p>
+                <p className="text-black dark:text-white-muted text-sm leading-relaxed">{item.description}</p>
                 <div className="flex items-center justify-between mt-auto pt-2">
-                  <span className="font-mono text-xs text-ink-faint">{item.organization}</span>
+                  <span className="font-mono text-xs text-black dark:text-white-faint">{item.organization}</span>
                   <span className="font-mono text-xs text-accent-glow">{item.date}</span>
                 </div>
               </GlassCard>

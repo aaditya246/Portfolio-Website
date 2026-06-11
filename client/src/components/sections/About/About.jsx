@@ -26,20 +26,20 @@ const About = () => {
           >
             <motion.p
               variants={staggerItem}
-              className="text-ink-muted text-base sm:text-lg leading-relaxed"
+              className="text-black dark:text-white-muted text-base sm:text-lg leading-relaxed"
             >
               {personalInfo.summary}
             </motion.p>
 
             <motion.div variants={staggerItem} className="flex flex-col gap-4">
-              <h3 className="font-display text-lg font-semibold text-ink">
+              <h3 className="font-display text-lg font-semibold text-black dark:text-white">
                 Relevant Coursework
               </h3>
               <div className="flex flex-wrap gap-3">
                 {coursework.map((course) => (
                   <span
                     key={course}
-                    className="font-mono text-xs sm:text-sm px-4 py-2 rounded-full border border-border bg-panel/60 backdrop-blur-sm text-ink-faint transition-colors duration-300 hover:border-border-hover hover:text-accent-glow"
+                    className="font-mono text-xs sm:text-sm px-4 py-2 rounded-full border border-border bg-panel/60 backdrop-blur-sm text-black dark:text-white-faint transition-colors duration-300 hover:border-border-hover hover:text-accent-glow"
                   >
                     {course}
                   </span>
@@ -56,7 +56,7 @@ const About = () => {
             viewport={viewportSettings}
             className="flex flex-col gap-6"
           >
-            <h3 className="font-display text-lg font-semibold text-ink">Education</h3>
+            <h3 className="font-display text-lg font-semibold text-black dark:text-white">Education</h3>
             {education.map((item, idx) => (
               <EducationCard key={idx} item={item} />
             ))}

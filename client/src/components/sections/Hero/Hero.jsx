@@ -38,7 +38,7 @@ const Hero = () => {
 
                     <motion.h1
                         variants={heroItem}
-                        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-ink tracking-tight leading-[1.1]"
+                        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-black dark:text-white tracking-tight leading-[1.1]"
                     >
                         {personalInfo.name}
                         <span className="text-accent"></span>
@@ -46,14 +46,14 @@ const Hero = () => {
 
                     <motion.div
                         variants={heroItem}
-                        className="text-xl sm:text-2xl md:text-3xl font-display font-semibold text-ink-faint h-10"
+                        className="text-xl sm:text-2xl md:text-3xl font-display font-semibold text-black dark:text-white-faint h-10"
                     >
                         <Typewriter words={personalInfo.typewriterRoles} className="text-accent" />
                     </motion.div>
 
                     <motion.p
                         variants={heroItem}
-                        className="text-ink-muted text-base sm:text-lg leading-relaxed max-w-xl"
+                        className="text-black dark:text-white-muted text-base sm:text-lg leading-relaxed max-w-xl"
                     >
                         {personalInfo.summary}
                     </motion.p>
@@ -103,28 +103,28 @@ const Hero = () => {
                             <span className="w-3 h-3 rounded-full bg-red-400/70" />
                             <span className="w-3 h-3 rounded-full bg-yellow-400/70" />
                             <span className="w-3 h-3 rounded-full bg-green-400/70" />
-                            <span className="ml-3 font-mono text-xs text-ink-muted">profile.js</span>
+                            <span className="ml-3 font-mono text-xs text-black dark:text-white-muted">profile.js</span>
                         </div>
 
                         {/* Terminal body */}
                         <div className="p-5 font-mono text-sm leading-relaxed">
-                            <p className="text-ink-muted">
+                            <p className="text-black dark:text-white-muted">
                                 <span className="text-accent">const</span>{' '}
-                                <span className="text-ink">developer</span> = {'{'}
+                                <span className="text-black dark:text-white">developer</span> = {'{'}
                             </p>
-                            <p className="pl-4 text-ink-muted">
+                            <p className="pl-4 text-black dark:text-white-muted">
                                 name: <span className="text-accent-glow">'{personalInfo.name}'</span>,
                             </p>
-                            <p className="pl-4 text-ink-muted">
+                            <p className="pl-4 text-black dark:text-white-muted">
                                 role: <span className="text-accent-glow">'{personalInfo.fullTitle}'</span>,
                             </p>
-                            {/* <p className="pl-4 text-ink-muted">
+                            {/* <p className="pl-4 text-black dark:text-white-muted">
                                 leetcode: <span className="text-accent-glow">'600+ solved'</span>,
                             </p> */}
-                            <p className="pl-4 text-ink-muted">
+                            <p className="pl-4 text-black dark:text-white-muted">
                                 stack: <span className="text-accent-glow">'MERN'</span>,
                             </p>
-                            <p className="text-ink-muted">{'};'}</p>
+                            <p className="text-black dark:text-white-muted">{'};'}</p>
                         </div>
                     </div>
                 </motion.div>
@@ -137,7 +137,7 @@ const Hero = () => {
                 transition={{ delay: 1.2, duration: 0.6 }}
                 className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10"
             >
-                <span className="font-mono text-xs text-ink-muted tracking-widest uppercase">
+                <span className="font-mono text-xs text-black dark:text-white-muted tracking-widest uppercase">
                     Scroll
                 </span>
                 <motion.div

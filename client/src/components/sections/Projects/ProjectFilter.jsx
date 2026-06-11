@@ -21,7 +21,7 @@ const ProjectFilter = ({ categories, activeCategory, onChange }) => {
             className={`relative font-mono text-sm px-5 py-2.5 rounded-xl border transition-colors duration-300 ${
               isActive
                 ? 'text-white border-border-hover'
-                : 'text-ink-muted border-border hover:text-ink hover:border-border-hover'
+                : 'text-black dark:text-white-muted border-border hover:text-black dark:text-white hover:border-border-hover'
             }`}
           >
             {isActive && (
